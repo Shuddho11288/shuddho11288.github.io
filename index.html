@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="6HmMrhMi4jKe08qxuC2fDHluebW1bPU2DNeFtbrH0eM" />
+    <link rel="shortcut icon" href="./Assets/img/272400693_479985240407771_144141354078268131_n.jpg" type="image/x-icon">
+    <title>Shuddho's Personal Website 😀</title>
+    <style>
+        :root{
+            --primary-color: #e3d6ed;
+            --text-color: #f3e4fc;
+            --secondary-color: #e1bbf8;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url("./Assets/img/wp2620450-wallpaper-hd-1080p-nature-green.jpg");
+            min-height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-position: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px;
+            padding-bottom: 50px;
+            transition-duration: 1s;
+            overflow-x: hidden;
+        }
+    /*background: linear-gradient(320deg, #00ffbd, #54aa94, #469b63, #61856d);
+    background-size: 800% 800%;
+    background-color: #54aa94;
+
+    -webkit-animation: AnimationName 17s ease infinite;
+    -moz-animation: AnimationName 17s ease infinite;
+    animation: AnimationName 17s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 5%}
+    50%{background-position:100% 96%}
+    100%{background-position:0% 5%}
+}*/
+        .bod{
+            padding: 10px;
+            color: var(--text-color);;
+            font-weight: 100;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background: rgba( 0, 0, 0, 0.55 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13px );
+            -webkit-backdrop-filter: blur( 13px );
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            max-width: 85vw;
+            min-width: 85vw;
+            overflow-y: hidden;
+        }
+        .bodp{
+            padding: 10px;
+            color: var(--text-color);;
+            font-weight: 100;
+            background: rgba( 0, 0, 0, 0.55 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13px );
+            -webkit-backdrop-filter: blur( 13px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            margin-top: 10px;
+            width: 85vw;
+            overflow-y: hidden;
+
+        }
+        .space{
+            min-height: 10px;
+        }
+        a{
+            transition-duration: 1s;
+            color: var(--text-color);;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #b9fff4;
+        }
+        .links{
+            color: var(--text-color);;
+            float: right;
+        }
+        .mid{
+            display: flex;
+            overflow-y: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        .projbox{
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: none;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.204);
+            padding: 20px;
+            min-height: 550px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+        .logo{
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:none;
+            border-radius:50%;
+            background-size: cover;
+            background-position: center;
+        }
+        progress{
+            width: 70vw;
+            color: #68d5d3;
+            
+        }
+        progress::-webkit-progress-value{
+            background-color: #68d5d3;
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 10px 10px 10px;
+        }
+        h1{
+             color:var(--primary-color);;
+        }
+        h3{
+            color: var(--primary-color);;
+        }
+        .end{
+            margin-bottom: 10px;
+        }
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba( 0, 0, 0, 0.55 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13px );
+            -webkit-backdrop-filter: blur( 13px );
+
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+            background-color: transparent;  
+            width: 1px;
+            
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--primary-color);
+            width: 1px;
+        }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--primary-color);;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .menubtn{
+    display: none;
+    font-size: larger;
+    color: var(--primary-color);;
+    float: right;
+}
+  @media screen and (max-width:530px) {
+    .links{
+        display: none;
+    }
+
+    .menubtn{
+        display: inline;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="bodp" style="margin-top: 30px;">
+        <span>Welcome to my website 😀</span>
+        <div class="menubtn" onclick="openNav()">&#9776; Menu</div>
+        <div class="links">
+            <a href="./index.html">Home </a>
+            <a onclick="scrollDown('about')">About </a>
+            <a onclick="scrollDown('skills')">Skills </a>
+            <a onclick="scrollDown('contacts')">Contact </a>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home </a>
+        <a onclick="scrollDown('about')">About </a>
+        <a onclick="scrollDown('skills')">Skills </a>
+        <a onclick="scrollDown('contacts')">Contact </a>
+    </div>
+    <div class="bod" style="align-items: center;justify-content: center;">
+        <div class="desc">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="img" style="background-image: url('./Assets/img/272400693_479985240407771_144141354078268131_n.jpg');width: 200px;background-size: cover;height: 200px;border: none;border-radius: 50%;">
+            </div>
+            <h1>Hi! I'm <span style="color: var(--secondary-color);">Tasawar Ahmed Shuddho</span></h1>
+            <p style="max-width: 1100px;">
+                I am a programmer, a web developer, a student, a data scientist, a competitive programmer, a cricket lover and so on. 😉 I made lots of projects. You can find them on my github account. I am mainly a python programmer. I also worked in game development for some months. You can get more details below 😁.
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+    <div class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
+        <h1>My Projects 💻</h1>
+        <div class="mid" style="flex-direction: row;flex-wrap: wrap;overflow-y: scroll;">
+
+            <div class="projbox">
+                <div class="logo" style="background-image: url('./Assets/img/prev.jpg');"></div>
+                <div class="projdesc" style="max-width: fit-content;">
+                    <h3>TS Chat, A messenger by python</h3>
+                    <p>One of my best projects is this chatting app! I made it using python with the help of google firebase api. All message are stored at firebase database only accessible to me. No chance for information leak or any other thing. We respect your rights and previlleges here and never think of to harm your personality. As it is made early the features are poor. But we can assure 100% safety using this app. <a style="color:rgb(183, 255, 255)" href="https://github.com/Shuddho11288/TSCHAT">Click here to download</a></p>
+                </div>
+            </div>
+            <div class="projbox">
+                <div class="logo" style="background-image: url('./Assets/img/825334.jpg');"></div>
+                <div class="projdesc" style="max-width: fit-content;">
+                    <h3>Free PUBG Virus 😈</h3>
+                    <p>A Pubg virus! Not much harmful. Just hampers your current work and makes you bound to force shutdown your pc. After restarting the virus remains stop in order to giving you an oppurtunity to unistall it or run it again ! A great way to prank your friends 😉 <a style="color:rgb(183, 255, 255)" href="https://pubg-free.netlify.app/">Click here to download</a></p>
+                </div>
+            </div>
+            <div class="projbox">
+                <div class="logo" style="background-image: url('./Assets/img/R.jpg');"></div>
+                <div class="projdesc" style="max-width: fit-content;">
+                    <h3>Apk Installer for WSA(Windows Subsystem for Android)</h3>
+                    <p>A fast and easy to use apk installer! It allows you to install any apk in your wsa in a moment by one click action! There are many similar apps in the internet but they are all not safe! But I made it using python so its fully safe and reliable! Please note that it is not a product of microsoft! So don't mess up things with microsoft! <a style="color:rgb(183, 255, 255)" href="https://github.com/Shuddho11288/apk-installer"> Click here to download</a></p>
+                </div>
+            </div>
+            <div class="projbox">
+                <div class="logo" style="background-image: url('./Assets/img/Daco_229715.png');"></div>
+                <div class="projdesc" style="max-width: fit-content;">
+                    <h3>Cuberun, My first 3d game!</h3>
+                    <p>Ever heard of this game? Almost every game developer starts their career journey with this game! But they do not publish it as it is a silly game. But I added some thrill to this game and made available for you 😁 <a style="color:rgb(183, 255, 255)" href="https://cuberun-bb3.netlify.app"> Click here to download</a></p>
+                </div>
+            </div>
+            <div class="projbox">
+                <div class="logo" style="background-image: url('./Assets/img/logo.png');"></div>
+                <div class="projdesc" style="max-width: fit-content;">
+                    <h3>TS Editor, My own made notepad alternative!</h3>
+                    <p>Ever heard about node js? It is a fast, easy and efficient programming language for backend developers! Even I made a custom titlebar for this app. The app is so lite that even a single core windows laptop can run it smoothly! Why waiting? Give it a try! <a style="color:rgb(183, 255, 255)" href="https://ts-editor-lite.netlify.app"> Click here to download</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="end"></div>
+        <div class="end"></div>
+    </div>
+    <div class="bod" id="about" style="align-items: center;justify-content: center; flex-direction: column;">
+        <h1>About Me 🙂</h1>
+        <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
+            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">📛 Name : </span><span>Tasawar Ahmed Shuddho</span></span>
+            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎂 Birth Date : </span><span>3 April, 2007</span></span>
+            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎒 Current School : </span><span>Dhaka Residential Model College</span></span>    
+            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🚩  Country : </span><span>Bangladesh</span></span>    
+            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🧑‍💻 Started Programming : </span><span>September 2020</span></span>                
+        </div>
+    </div>
+    <div class="bod" id="skills" style="align-items: center;justify-content: center; flex-direction: column;">
+        <h1>My Skills 🤓</h1>
+        <div class="mid" style="flex-wrap: wrap;  justify-content: center;">
+            <span>Programming : <br><progress value="80" max="100"></progress> 80%</span>
+            <span>Math : <br><progress value="85" max="100"></progress> 85%</span>
+            <span>Science : <br><progress value="70" max="100"></progress> 70%</span>
+            <span>Cricket : <br><progress value="65" max="100"></progress> 65%</span>
+            <span>Academic Education : <br><progress value="90" max="100"></progress> 90%</span>
+            <span>Hacking : <br><progress value="10" max="100"></progress> 10%</span>
+            <span>Competitive Programming : <br><progress value="50" max="100"></progress> 50%</span>
+            <span>Algorithm and Data Structure : <br><progress value="50" max="100"></progress> 50%</span>
+            <span>Gaming : <br><progress value="40" max="100"></progress> 40%</span>
+            <span>Web Development : <br><progress value="70" max="100"></progress> 70%</span>
+            <span>Mobile Development : <br><progress value="30" max="100"></progress> 30%</span>
+            <span>Photography : <br><progress value="70" max="100"></progress> 70%</span>
+        </div>
+        <div class="end"></div>
+        <div class="end"></div>
+
+    </div>
+
+    <div id="contacts" class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
+        <h1>My Contacts 📱</h1>
+        <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
+            <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Email : </h3><a href="mailto:tasawarshuddho@gmail.com">tasawarshuddho@gmail.com</a></span>
+            <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Facebook : </h3><a href="https://www.facebook.com/tasawarahmed.shuddho/">Tasawar Ahmed Shuddho</a></span>
+            <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Github : </h3><a href="https://github.com/shuddho11288">Shuddho 11288</a></span>    
+        </div>
+    </div>
+    <div class="bod">
+        <div class="footer" style="display:flex;flex-direction: row;justify-content: space-between;width: 100%; padding: 20px; flex-wrap: wrap;">
+            <div class="col">
+                <h2 style="font-weight: bold;  color:var(--primary-color);;">Other Projects</h2>
+                <a href="https://cuberun-bb3.netlify.app">Cuberun</a>
+                <a href="https://calculatorbyshuddho.netlify.app">Calculator</a>
+                <a href="https://encodeurmsg.netlify.app">Encode Message</a>
+
+            </div>
+            <div class="col" >
+                <h2 style="font-weight: bold;  color:var(--primary-color);;">Website Idea</h2>
+                <a href="https://dribbble.com/">Dribbble</a>
+                <a href="https://microsoft.com">Microsoft</a>
+                <a href="https://material.io">Material UI</a>
+                <a href="https://google.com">Google</a>
+                <a href="https://www.torrentbd.com/">Torrent BD</a>
+
+            </div>
+
+            <div class="col">
+                <h2 style="font-weight: bold; color:var(--primary-color);;">IDE for coding</h2>
+                <a href="https://code.visualstudio.com/">VS Code</a>
+            </div>
+            <div class="col">
+                <h2 style="font-weight: bold; color:var(--primary-color);;">Programming</h2>
+                <a href="https://nodejs.org/">Node js</a>
+                <a href="https://www.electronjs.org/">Electron Framework</a>
+            </div>
+    </div>
+
+</div>
+<script>
+    function scrollDown(id){
+    var elmnt = document.getElementById(id);
+    elmnt.scrollIntoView();
+    closeNav();
+}
+function openNav() {
+
+
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+</body>
+</html>
