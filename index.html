@@ -73,7 +73,7 @@
             margin-top: 10px;
             max-width: 85vw;
             min-width: 85vw;
-            overflow-y: hidden;
+            
         }
         .bodp{
             padding: 10px;
@@ -179,7 +179,7 @@
   ::-webkit-scrollbar{
     display: none;
             background-color: transparent;  
-            width: 1px;
+            width: 10px;
             
         }
         ::-webkit-scrollbar-thumb{
@@ -264,8 +264,9 @@
     </div>
     <div class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
         <h1>My Projects 💻</h1>
-        <div class="mid" style="flex-direction: row;flex-wrap: wrap;overflow-y: scroll;">
-
+        <p> (Scroll right for more projects)</p>
+        <div class="mid" style="flex-direction: row;flex-wrap: nowrap;overflow-x: visible;max-width: 100%;justify-content: flex-start;">
+            <div class="space" style="margin-left: 20px;"></div>
             <div class="projbox">
                 <div class="logo" style="background-image: url('./Assets/img/prev.jpg');"></div>
                 <div class="projdesc" style="max-width: fit-content;">
@@ -307,16 +308,40 @@
     </div>
     <div class="bod" id="about" style="align-items: center;justify-content: center; flex-direction: column;">
         <h1>About Me 🙂</h1>
-        <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
-            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">📛 Name : </span><span>Tasawar Ahmed Shuddho</span></span>
-            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎂 Birth Date : </span><span>3 April, 2007</span></span>
-            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎒 Current School : </span><span>Dhaka Residential Model College</span></span>    
-            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🚩  Country : </span><span>Bangladesh</span></span>    
-            <span><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🧑‍💻 Started Programming : </span><span>September 2020</span></span>                
+        <p> (Datas can be old)</p>
+
+        <div class="none" style="display: flex;flex-direction: row;flex-wrap: wrap;width: 100%;align-items: center;justify-content: space-evenly;">
+            <div class="none">
+                <div class="img" style="background-image: url('./Assets/img/272400693_479985240407771_144141354078268131_n.jpg');width: 200px;background-size: cover;height: 200px;border: none;border-radius: 50%;"></div>
+                <span style="font-weight: bold; color: var(--secondary-color);">Picture : </span>My profile picture.
+            </div>
+            <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; width: fit-content;">
+                <div class="end"></div>
+                <div class="end"></div>
+                <div class="end"></div>
+                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">📛 Name : </span><span >Tasawar Ahmed Shuddho</span></span>
+                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎂 Birth Date : </span><span>3 April, 2007</span></span>
+                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🏫 School : </span><span>Dhaka Residential Model College</span></span>    
+                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🚩  Country : </span><span>Bangladesh</span></span>    
+                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🧑‍💻 Started Programming : </span><span>September 2020</span></span>                
+            </div>
+            
+            <div class="none" style="max-width: 80%; margin-top: 20px;">
+                
+                <h2 style="color: var(--primary-color);text-decoration: underline;">A short description about me  </h2>
+                <p style="max-width: 100%;">I am Bangladeshi by birth and currently reading at <abbr title="Dhaka Residential Model College">DRMC</abbr> in Class 9 (Science). I have a programming enthusiast and have great ambition for cricket. I have passed about 2 hours in my journey with programming. I already have developed some apps, designed some websites, prepared some coding package for fast programming. You can get them all in my github.</p>
+
+            </div>
+            
         </div>
+        <div class="end"></div>
+        <div class="end"></div>
+        <div class="end"></div>
+        <div class="end"></div>
     </div>
     <div class="bod" id="skills" style="align-items: center;justify-content: center; flex-direction: column;">
         <h1>My Skills 🤓</h1>
+        <p style="max-width: 80%;">All Datas or simply the progress bars' values are judged by myself. 😅</p>
         <div class="mid" style="flex-wrap: wrap;  justify-content: center;">
             <span>Programming : <br><progress value="80" max="100"></progress> 80%</span>
             <span>Math : <br><progress value="85" max="100"></progress> 85%</span>
@@ -338,13 +363,14 @@
 
     <div id="contacts" class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
         <h1>My Contacts 📱</h1>
+        <p style="max-width: 80%;">You can contact me here but please don't spam! </p>
         <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Email : </h3><a href="mailto:tasawarshuddho@gmail.com">tasawarshuddho@gmail.com</a></span>
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Facebook : </h3><a href="https://www.facebook.com/tasawarahmed.shuddho/">Tasawar Ahmed Shuddho</a></span>
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Github : </h3><a href="https://github.com/shuddho11288">Shuddho 11288</a></span>    
         </div>
     </div>
-    <div class="bod">
+    <div class="bod" style="align-items: center; justify-content: center;">
         <div class="footer" style="display:flex;flex-direction: row;justify-content: space-between;width: 100%; padding: 20px; flex-wrap: wrap;">
             <div class="col">
                 <h2 style="font-weight: bold;  color:var(--primary-color);;">Other Projects</h2>
@@ -372,6 +398,11 @@
                 <a href="https://nodejs.org/">Node js</a>
                 <a href="https://www.electronjs.org/">Electron Framework</a>
             </div>
+            
+    </div>
+    <div class="none" style="display: flex;flex-direction:column;align-items: center;justify-content: center;">
+            <p>Thanks for visiting my site :)</p>
+    <p style="max-width: 80%;"><span style="font-weight: bold;color: var(--secondary-color);">© Copyright </span> Tasawar Ahmed Shuddho. All rights reserved.</p>
     </div>
 
 </div>
