@@ -19,9 +19,12 @@
             scroll-behavior: smooth;
         }
         body{
+            background-color: var(--text-color);
             background-image: url("./Assets/img/wp2620450-wallpaper-hd-1080p-nature-green.jpg");
             min-height: 100vh;
             margin: 0;
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
             background-size: cover;
             background-position: right;
             display: flex;
@@ -32,6 +35,7 @@
             padding-bottom: 50px;
             transition-duration: 1s;
             overflow-x: hidden;
+            overflow-y: scroll;
         }
     /*background: linear-gradient(320deg, #00ffbd, #54aa94, #469b63, #61856d);
     background-size: 800% 800%;
@@ -176,15 +180,19 @@
     transition: 0.5s;
     padding-top: 60px;
   }
+
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
   ::-webkit-scrollbar{
-    display: none;
+            margin-top: 50px;    
             background-color: transparent;  
-            width: 10px;
+            height: 3px;
+            width: 3px;
             
         }
         ::-webkit-scrollbar-thumb{
-            background-color: var(--primary-color);
-            width: 1px;
+            background-color: var(--secondary-color);
         }
   .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -212,6 +220,13 @@
     color: var(--primary-color);;
     float: right;
 }
+.progressbar{
+    background-size: 80%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    height: 3px;
+    width: 80%;
+}
   @media screen and (max-width:530px) {
     .links{
         display: none;
@@ -221,10 +236,24 @@
         display: inline;
     }
 }
+.bg{
+            margin: 0;
+            position: fixed;
+            overflow: auto;
+            top:0;
+            background-image: url("./Assets/img/wp2620450-wallpaper-hd-1080p-nature-green.jpg");
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(73, 128, 73);
+            
+
+        }
     </style>
 </head>
 <body>
-
+    <div class="bg"></div>
     <div class="bodp" style="margin-top: 30px;">
         <span>Welcome to my website 😀</span>
         <div class="menubtn" onclick="openNav()">&#9776; Menu</div>
@@ -302,6 +331,7 @@
                     <p>Ever heard about node js? It is a fast, easy and efficient programming language for backend developers! Even I made a custom titlebar for this app. The app is so lite that even a single core windows laptop can run it smoothly! Why waiting? Give it a try! <a style="color:rgb(183, 255, 255)" href="https://ts-editor-lite.netlify.app"> Click here to download</a></p>
                 </div>
             </div>
+            <div class="none" style="min-height: 650px;"></div>
         </div>
         <div class="end"></div>
         <div class="end"></div>
@@ -315,15 +345,16 @@
                 <div class="img" style="background-image: url('./Assets/img/272400693_479985240407771_144141354078268131_n.jpg');width: 200px;background-size: cover;height: 200px;border: none;border-radius: 50%;"></div>
                 <span style="font-weight: bold; color: var(--secondary-color);">Picture : </span>My profile picture.
             </div>
-            <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; width: fit-content;">
+            <div class="mid" style="justify-content: flex-start;align-items:flex-start;min-width: 40%;flex-direction: column;">
                 <div class="end"></div>
                 <div class="end"></div>
                 <div class="end"></div>
-                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">📛 Name : </span><span >Tasawar Ahmed Shuddho</span></span>
+                <span style="margin-left: 5%;width: max-content;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">📛 Name : </span><span >Tasawar Ahmed Shuddho</span></span>
                 <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🎂 Birth Date : </span><span>3 April, 2007</span></span>
                 <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🏫 School : </span><span>Dhaka Residential Model College</span></span>    
                 <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🚩  Country : </span><span>Bangladesh</span></span>    
-                <span style="margin-left: 5%;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🧑‍💻 Started Programming : </span><span>September 2020</span></span>                
+                <span style="margin-left: 5%;width: max-content;"><span style="font-weight: bold; font-size: larger; color:var(--primary-color);;">🧑‍💻 Started Programming : </span><span>September 2020</span></span>                
+                <div class="none" style="height: 20px;"></div>
             </div>
             
             <div class="none" style="max-width: 80%; margin-top: 20px;">
@@ -346,7 +377,6 @@
             <span>Programming : <br><progress value="80" max="100"></progress> 80%</span>
             <span>Math : <br><progress value="85" max="100"></progress> 85%</span>
             <span>Science : <br><progress value="70" max="100"></progress> 70%</span>
-            <span>Cricket : <br><progress value="65" max="100"></progress> 65%</span>
             <span>Academic Education : <br><progress value="90" max="100"></progress> 90%</span>
             <span>Hacking : <br><progress value="10" max="100"></progress> 10%</span>
             <span>Competitive Programming : <br><progress value="50" max="100"></progress> 50%</span>
@@ -355,15 +385,20 @@
             <span>Web Development : <br><progress value="70" max="100"></progress> 70%</span>
             <span>Mobile Development : <br><progress value="30" max="100"></progress> 30%</span>
             <span>Photography : <br><progress value="70" max="100"></progress> 70%</span>
+            
         </div>
+        <div class="end"></div>
+        <div class="end"></div>
+        <div class="end"></div>
+        <div class="end"></div>
         <div class="end"></div>
         <div class="end"></div>
 
     </div>
 
     <div id="contacts" class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
-        <h1>My Contacts 📱</h1>
-        <p style="max-width: 80%;">You can contact me here but please don't spam! </p>
+        <h1 style="margin-right: 50px;">My Contacts 📱</h1>
+        <p style="max-width: 80%;margin-right: 50px;">You can contact me here but please don't spam! </p>
         <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Email : </h3><a href="mailto:tasawarshuddho@gmail.com">tasawarshuddho@gmail.com</a></span>
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Facebook : </h3><a href="https://www.facebook.com/tasawarahmed.shuddho/">Tasawar Ahmed Shuddho</a></span>
