@@ -14,6 +14,7 @@
             --primary-color: #e3d6ed;
             --text-color: #f3e4fc;
             --secondary-color: #e1bbf8;
+            --dark-color: rgba(146, 128, 156, 0.553);
         }
         html{
             scroll-behavior: smooth;
@@ -128,9 +129,29 @@
             border-radius: 20px;
             background: rgba(0, 0, 0, 0.204);
             padding: 20px;
-            min-height: 550px;
-            min-width: 300px;
-            max-width: 300px;
+            min-height: 570px;
+            max-height: 570px;
+            min-width: 250px;
+            max-width: 250px;
+        }
+        .card{
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: none;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.204);
+            padding: 20px;
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 400px;
+            max-height: 400px;
+
         }
         .logo{
             width: 200px;
@@ -185,15 +206,25 @@ body::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
   ::-webkit-scrollbar{
-            margin-top: 50px;    
+               
             background-color: transparent;  
-            height: 3px;
-            width: 3px;
+            height: 7px;
+            border:none;
+            border-radius: 10px;
+
             
-        }
-        ::-webkit-scrollbar-thumb{
+    }
+    ::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+
             background-color: var(--secondary-color);
-        }
+    }
+    ::-webkit-scrollbar:hover{
+            height: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+            height: 10px;
+    }
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -202,7 +233,23 @@ body::-webkit-scrollbar {
     display: block;
     transition: 0.3s;
   }
-  
+  progress{
+      height: 2px;
+      border-radius: 60px;
+      background: var(--dark-color);
+      box-sizing: border-box;
+      margin-bottom: 3px;
+      accent-color: var(--secondary-color);
+      }
+      progress::-webkit-progress-value {
+      border-radius: 30px;
+      background: var(--secondary-color);
+      
+      }
+      progress::-webkit-progress-bar{
+      background: transparent;
+      accent-color: var(--secondary-color);
+      }
   .sidenav a:hover {
     color: var(--secondary-color);
   }
@@ -227,6 +274,12 @@ body::-webkit-scrollbar {
     height: 3px;
     width: 80%;
 }
+.card a{
+    color: var(--secondary-color);
+}
+.card a:hover{
+    color: var(--primary-color);
+}
   @media screen and (max-width:530px) {
     .links{
         display: none;
@@ -250,6 +303,7 @@ body::-webkit-scrollbar {
             
 
         }
+
     </style>
 </head>
 <body>
@@ -258,10 +312,10 @@ body::-webkit-scrollbar {
         <span>Welcome to my website 😀</span>
         <div class="menubtn" onclick="openNav()">&#9776; Menu</div>
         <div class="links">
-            <a href="./index.html">Home </a>
-            <a onclick="scrollDown('about')">About </a>
-            <a onclick="scrollDown('skills')">Skills </a>
-            <a onclick="scrollDown('contacts')">Contact </a>
+            <a style="margin-right: 10px;" href="./index.html">Home </a>
+            <a style="margin-right: 10px;" onclick="scrollDown('about')">About </a>
+            <a style="margin-right: 10px;" onclick="scrollDown('skills')">Skills </a>
+            <a style="margin-right: 10px;" onclick="scrollDown('contacts')">Contact </a>
         </div>
     </div>
     <div id="mySidenav" class="sidenav">
@@ -271,8 +325,8 @@ body::-webkit-scrollbar {
         <a onclick="scrollDown('skills')">Skills </a>
         <a onclick="scrollDown('contacts')">Contact </a>
     </div>
-    <div class="bod" style="align-items: center;justify-content: center;">
-        <div class="desc">
+    <div class="bod" style="flex-direction: column;align-items: center;justify-content: center;">
+        <div class="desc" style="max-width: 80%;">
             <br>
             <br>
             <br>
@@ -331,7 +385,7 @@ body::-webkit-scrollbar {
                     <p>Ever heard about node js? It is a fast, easy and efficient programming language for backend developers! Even I made a custom titlebar for this app. The app is so lite that even a single core windows laptop can run it smoothly! Why waiting? Give it a try! <a style="color:rgb(183, 255, 255)" href="https://ts-editor-lite.netlify.app"> Click here to download</a></p>
                 </div>
             </div>
-            <div class="none" style="min-height: 650px;"></div>
+            <div class="none" style="min-height: 680px;"></div>
         </div>
         <div class="end"></div>
         <div class="end"></div>
@@ -397,13 +451,40 @@ body::-webkit-scrollbar {
     </div>
 
     <div id="contacts" class="bod" style="align-items: center;justify-content: center; flex-direction: column;">
-        <h1 style="margin-right: 50px;">My Contacts 📱</h1>
-        <p style="max-width: 80%;margin-right: 50px;">You can contact me here but please don't spam! </p>
-        <div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
+        <h1>My Contacts 📱</h1>
+        <p style="max-width: 90%;">You can contact me here but please don't spam! </p>
+        <!--<div class="mid" style="justify-content: flex-start;align-items:flex-start;width: 100%;flex-direction: column; margin: 30px;">
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Email : </h3><a href="mailto:tasawarshuddho@gmail.com">tasawarshuddho@gmail.com</a></span>
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Facebook : </h3><a href="https://www.facebook.com/tasawarahmed.shuddho/">Tasawar Ahmed Shuddho</a></span>
             <span><h3 style="font-weight: bold; font-size: larger; color:var(--primary-color);;">Github : </h3><a href="https://github.com/shuddho11288">Shuddho 11288</a></span>    
+        </div>-->
+        <div class="mid" style="flex-direction: row;flex-wrap: nowrap;overflow-x: visible;max-width: 100%;justify-content: flex-start;">
+            <div class="none" style="margin-left: 20px;"></div>    
+            <div class="card">
+                    <div class="logo" style="background-image: url('./Assets/img/image-removebg-preview.png');"></div>
+                    <h3>Gmail</h3>
+                    <p>You can send email at <a href="mailto://tasawarshuddho@gmail.com">tasawarshuddho@gmail.com</a></p>
+                </div>
+                <div class="card">
+                    <div class="logo" style="background-image: url('./Assets/img/image-removebg-preview-fb.png');"></div>
+                    <h3>Facebook</h3>
+                    <p>You can send me message at <a href="https://www.facebook.com/tasawarahmed.shuddho">Tasawar Ahmed Shuddho</a></p>
+                </div>
+                <div class="card">
+                    <div class="logo" style="background-image: url('./Assets/img/outlook.png'); background-size: 150%; background-repeat: no-repeat;"></div>
+                    <h3>Outlook</h3>
+                    <p>You can send me outlook mail at <a href="mailto://shuddhotasawar@outlook.com">shuddhotasawar@outlook.com</a></p>
+                </div>
+                <div class="card">
+                    <div class="logo" style="background-image: url('./Assets/img/image-removebg-preview-dc.png'); background-size: cover; background-repeat: no-repeat;"></div>
+                    <h3>Discord</h3>
+                    <p>You can me message in discord too! Here is my id - <a>Shuddho#8124</a></p>
+                </div>
+                <div class="none" style="height: 520px;"></div>
         </div>
+        <div class="end"></div>
+        <div class="end"></div>
+        <div class="end"></div>
     </div>
     <div class="bod" style="align-items: center; justify-content: center;">
         <div class="footer" style="display:flex;flex-direction: row;justify-content: space-between;width: 100%; padding: 20px; flex-wrap: wrap;">
